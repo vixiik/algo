@@ -20,6 +20,10 @@ py -m http.server 8000
 
 Poté otevřete `http://localhost:8000`.
 
+## Bezpečnost stránky
+
+Stránka je čistá statická aplikace. Nenahraje žádné externí knihovny, nevytváří přesměrování ani neodesílá odpovědi testu na server. Otevřené odpovědi se zpracují pouze v JavaScriptu v prohlížeči. HTML obsahuje omezení Content Security Policy a přísné omezení zdrojů pouze na vlastní soubory projektu.
+
 ## Publikování na GitHub Pages
 
 1. Vytvořte repozitář a nahrajte všechny soubory z kořenové složky projektu.
