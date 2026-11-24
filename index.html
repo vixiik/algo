@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Přehledný učební materiál o algoritmech a zápisu algoritmů.">
+  <title>Algoritmy a algoritmizace</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#uvod" aria-label="Domů">ALG<span>O</span></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Otevřít menu">☰</button>
+    <nav id="main-nav" class="nav" aria-label="Hlavní navigace">
+      <a href="#uvod">Úvod</a>
+      <a href="#vlastnosti">Vlastnosti</a>
+      <a href="#zapis">Zápis</a>
+      <a href="#diagramy">Diagramy</a>
+      <a href="#informace">Další informace</a>
+      <a href="#test">Test</a>
+    </nav>
+  </header>
+  
+
+  <main>
+    <section id="uvod" class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Algoritmizace / zpracování textu</p>
+        <h1>Algoritmy a algoritmizace</h1>
+        <p class="lead">Algoritmus je přesný postup, který je potřeba k vykonání určité činnosti.</p>
+        <p>Počítač nemá vlastní inteligenci a dělá pouze to, co mu přesně přikážeme. Při tvorbě programu nejprve vymyslíme přesné řešení a teprve potom postup přepíšeme do konkrétního programovacího jazyka.</p>
+        <a class="button" href="#vlastnosti">Začít se učit <span aria-hidden="true">↓</span></a>
+      </div>
+      <div class="hero-code" aria-label="Ukázka sekvenčního zápisu">
+        <div class="code-head"><span></span><span></span><span></span></div>
+        <pre><code><b>01</b>  Čti: A, B
+<b>02</b>  X := (A + B) / (C + D)
+<b>03</b>  Zobraz: X
+<b>04</b>  Konec</code></pre>
+      </div>
+    </section>
+
+    <section id="vlastnosti" class="section">
+      <div class="section-heading">
+        <p class="eyebrow">Základy</p>
+        <h2>Vlastnosti správného algoritmu</h2>
+      </div>
+      <div class="card-grid">
+        <article class="card"><span class="number">01</span><h3>Konečnost</h3><p>Po konečném počtu kroků musí algoritmus dojít od začátku do konce.</p><div class="example"><strong>Příklad:</strong> Cyklus se zastaví po předem daném počtu opakování.</div></article>
+        <article class="card"><span class="number">02</span><h3>Věcná správnost</h3><p>Algoritmus musí používat správné vzorce a postupy.</p><div class="example"><strong>Příklad:</strong> Chybný vzorec může zdánlivě počítat, ale dává špatný výsledek.</div></article>
+        <article class="card"><span class="number">03</span><h3>Jednoznačnost</h3><p>Každý krok i možné větvení musí být naprosto jasné.</p><div class="example"><strong>Příklad:</strong> Před dělením ověřím, zda jmenovatel není nula.</div></article>
+        <article class="card"><span class="number">04</span><h3>Obecnost</h3><p>Algoritmus řeší širší skupinu úloh, nikoli jeden konkrétní vstup.</p><div class="example"><strong>Příklad:</strong> <code>A + B</code> funguje pro libovolná dvě zadaná čísla.</div></article>
+        <article class="card"><span class="number">05</span><h3>Opakovatelnost</h3><p>Při stejných vstupních datech vznikne vždy stejný výsledek.</p><div class="example"><strong>Příklad:</strong> Výsledek nesmí záviset na neznámé proměnné.</div></article>
+        <article class="card"><span class="number">06</span><h3>Srozumitelnost</h3><p>Zápis musí být čitelný pro programátory i autora pozdějších úprav.</p><div class="example"><strong>Příklad:</strong> Používám smysluplné názvy proměnných a komentáře.</div></article>
+      </div>
+    </section>
+
+    <section id="zapis" class="section">
+      <div class="section-heading"><p class="eyebrow">Pět forem</p><h2>Možnosti zápisu algoritmů</h2></div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Forma</th><th>Charakteristika</th><th>Výhody</th><th>Omezení</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Slovní vyjádření</strong></td><td>Návody a recepty pro prvotní komunikaci analytika se zákazníkem.</td><td>Srozumitelné i pro laiky.</td><td>Nejméně přehledné; obtížně se hlídá přesnost.</td></tr>
+            <tr><td><strong>Matematický zápis</strong></td><td>Úlohy popsané matematickými vzorci a vztahy.</td><td>Jednoznačný pro odborníky.</td><td>Neobsahuje ošetření všech okrajových podmínek.</td></tr>
+            <tr><td><strong>Rozhodovací tabulky</strong></td><td>Kombinace vstupů a jednoduchých řešení, například pravdivostní tabulky.</td><td>Přehledné a jednoznačné.</td><td>Nejsou vhodné pro složitější dlouhé postupy.</td></tr>
+            <tr><td><strong>Vývojové diagramy</strong></td><td>Grafický jazyk značek propojených orientovanými hranami.</td><td>Názorné a vhodné pro dokumentaci.</td><td>Počítač jim přímo nerozumí.</td></tr>
+            <tr><td><strong>Počítačový program</strong></td><td>Zápis v programovacím jazyce.</td><td>Rozumí mu člověk i počítač.</td><td>Vyžaduje znalost konkrétního jazyka.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="source-note">Překladač převádí program napsaný v programovacím jazyce do strojového kódu.</p>
+    </section>
+
+    <section id="diagramy" class="section">
+      <div class="section-heading"><p class="eyebrow">Grafický zápis</p><h2>Základní značky vývojových diagramů</h2></div>
+      <p class="section-intro">Diagram se kreslí standardně odshora dolů a zleva doprava.</p>
+      <div class="symbol-grid">
+        <article class="symbol-card"><div class="symbol oval">Začátek</div><h3>Ovál</h3><p>Začátek nebo konec programu či podprogramu.</p></article>
+        <article class="symbol-card"><div class="symbol parallelogram">Čti / Zobraz</div><h3>Kosodélník</h3><p>Vstup nebo výstup dat. Má jeden vstup a jeden výstup.</p></article>
+        <article class="symbol-card"><div class="symbol rectangle">A := A + B</div><h3>Obdélník</h3><p>Zpracování a sekvenční výpočty bez větvení.</p></article>
+        <article class="symbol-card"><div class="symbol diamond">A &gt; 0?</div><h3>Kosočtverec</h3><p>Rozhodnutí: výstup <b>+</b> ano a <b>-</b> ne.</p></article>
+        <article class="symbol-card"><div class="symbol hexagon">i := 1 až 10</div><h3>Šestiúhelník</h3><p>Příprava cyklu o známém počtu opakování.</p></article>
+        <article class="symbol-card"><div class="symbol connector">1</div><h3>Spojka</h3><p>Propojuje přerušované části; související spojky mají stejné číslo.</p></article>
+        <article class="symbol-card"><div class="symbol subroutine">Podprogram</div><h3>Podprogram</h3><p>Samostatná opakující se část programu pro zjednodušení a ladění.</p></article>
+      </div>
+    </section>
+
+    <section id="informace" class="section">
+      <div class="section-heading"><p class="eyebrow">Bezpečné výpočty</p><h2>Další důležité informace</h2></div>
+      <div class="info-grid">
+        <article class="info-card">
+          <h3>Logické operátory</h3>
+          <div class="operator"><strong>AND</strong><p><code>A AND B</code> má hodnotu 1 pouze tehdy, jsou-li obě hodnoty rovny 1.</p></div>
+          <div class="operator"><strong>OR</strong><p><code>A OR B</code> má hodnotu 1, když je rovna 1 alespoň jedna hodnota.</p></div>
+        </article>
+        <article class="info-card">
+          <h3>Správný zápis výrazů</h3>
+          <div class="code-line"><span>Správně</span><code>X := (A+B) / (C+D)</code></div>
+          <div class="code-line bad"><span>Chybně</span><code>X := A+B / C+D</code></div>
+          <p>Zlomkovou čáru nahrazujeme lomítkem <code>/</code>. Závorky zachovají přednost operací. <code>SQRT(...)</code>, stejně jako goniometrické funkce, mají argument vždy v závorce.</p>
+        </article>
+        <article class="info-card">
+          <h3>Podmínky řešitelnosti</h3>
+          <ul class="check-list">
+            <li><strong>Dělení nulou:</strong> před výpočtem ověř, že jmenovatel není nula.</li>
+            <li><strong>Odmocnina:</strong> pod odmocninou nesmí být záporný výraz v oboru reálných čísel.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="test" class="section test-section">
+      <div class="section-heading"><p class="eyebrow">Kontrola znalostí</p><h2>Interaktivní test</h2></div>
+      <div class="test-toolbar">
+        <p>9 otázek · otázky 1–5 s výběrem odpovědi</p>
+        <span id="progress">0 / 9 zodpovězeno</span>
+      </div>
+      <form id="quiz-form" novalidate></form>
+      <div id="quiz-actions" class="quiz-actions">
+        <button id="submit-quiz" class="button" type="button">Vyhodnotit test</button>
+        <button id="restart-quiz" class="button secondary" type="button" hidden>Opakovat test</button>
+      </div>
+      <div id="quiz-result" class="quiz-result" role="status" aria-live="polite" hidden></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Algoritmizace – zpracování textu</p>
+    <a href="#uvod">Zpět nahoru ↑</a>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
